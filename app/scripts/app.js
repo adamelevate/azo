@@ -26,4 +26,30 @@ angular
       .otherwise({
         redirectTo: '/'
       });
+  })
+var SenderCtrl;
+
+.factory('Mandrill', function($resource) {
+  var Mandrill;
+  return Mandrill = $resource('https://mandrillapp.com/api/1.0/:category/:call.json', {}, {
+    sendMessage: {
+      method: "POST",
+      isArray: true,
+      params: {
+        category: "messages",
+        call: "send"
+      }
+    },
+    ping: {
+      method: "POST",
+      params: {
+        category: "users",
+        call: "ping"
+      }
+    }
   });
+})
+.config(function($httpProvider) {
+  return delete $httpProvider.defaults.headers.common["X-Requested-With"];
+});
+

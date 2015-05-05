@@ -1,0 +1,122 @@
+// out: main.css, compress: false, strictMath: true
+
+@blue: rgb(1,90,170);
+@orange: rgb(241,112,48);
+
+
+header{
+    background: @blue;
+    padding: 20px 0;
+    .logo{
+        img{
+            height: 100px;
+            border-radius: 14px;
+        }
+    }
+    nav{
+        ul{
+            margin:0;
+            li{
+                list-style: none;
+                float:left;
+                width:25%;
+                text-align: center;
+                margin-top: 35px;
+                a{
+                    color:#fff;
+                    display: inline-block;
+                    padding: 10px 8px;
+                    border-radius: 5px;
+                    font-size: 16px;
+                    &:hover{
+                     background: darken(@blue , 10%);
+                        text-decoration: none;
+                        color:#fff;
+                    }
+                }
+            }   
+        }
+    }
+    
+}
+
+.hero{
+    background: @blue;
+    text-align: center;
+    padding: 30px 0 60px 0;
+    h1{
+        font-size: 60px;
+        color:#fff;
+        margin-bottom: 30px;
+    }
+    .btn{
+        border-radius: 8px;
+        border: 3px solid rgba(255,255,255, .5);
+        color: #fff;
+        padding: 12px 20px;
+        font-size: 16px;
+        &:hover{
+            background:#fff;
+            color:@blue;
+            border-color:#fff;
+        }
+    }
+}
+
+section.section{
+    padding: 40px 0;
+    &.blue{
+        background: @blue;
+        color: #fff;
+    }
+    &.gray{
+        background: #f2f2f2;
+        .container{
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        h2{
+            color: #bbb;
+            text-align: center;
+        }
+    }
+    h2{
+        margin-top: 0;   
+    }
+    .btn.btn-warning{
+        background: @orange;
+        min-width: 200px;
+        padding:8px 10px;
+        border-color:transparent;
+        svg{
+            float: left;
+            fill: #fff;
+        }
+        span{
+            line-height: 32px;
+            display: inline-block;
+            margin-left: 10px;
+        }
+    }
+    img{
+     width:100%;   
+    }
+    p{
+        margin-bottom: 30px;
+    }
+    ul{
+        text-align: left;
+        margin-bottom: 30px;
+    }
+    form{
+        background: #fff;
+        border:1px solid #ccc;
+        padding: 20px;
+    }
+}
+
+footer{
+    background: @blue;
+    padding:30px 0;
+}
+
