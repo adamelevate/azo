@@ -106,3 +106,6 @@ footer {
   background: #015aaa;
   padding: 30px 0;
 }
+footer img {
+  width: 100%;
+}

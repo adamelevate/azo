@@ -15,7 +15,8 @@ angular
     'ngResource',
     'ngRoute',
     'ngSanitize',
-    'ngTouch'
+    'ngTouch',
+    'duScroll'
   ])
   .config(function ($routeProvider) {
     $routeProvider
@@ -26,8 +27,8 @@ angular
       .otherwise({
         redirectTo: '/'
       });
+    
   })
-var SenderCtrl;
 
 .factory('Mandrill', function($resource) {
   var Mandrill;
